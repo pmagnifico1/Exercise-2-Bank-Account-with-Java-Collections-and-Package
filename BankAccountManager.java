@@ -29,6 +29,7 @@ public class BankAccountManager implements Bank {
     return accounts.get(id);
   }
 
+  /** Prints each account's ID, owner name, and balance. */
   public void listAccounts() {
     for (Map.Entry<Integer, BankAccount> entry : accounts.entrySet()) {
       int accountId = entry.getKey();
