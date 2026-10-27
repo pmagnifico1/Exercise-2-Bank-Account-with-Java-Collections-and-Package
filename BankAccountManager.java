@@ -14,13 +14,14 @@ public class BankAccountManager implements Bank {
   @Override
   public void addAccount(BankAccount account) {
     // TODO Auto-generated method stub
+    if (accounts.size() >= 100) {
+      System.out.println("Maximum accounts reached");
+      return;
+    }
+
     accounts.put(id, account);
     System.out.println("Account added successfully with ID: " + id);
     id++;
-    if (accounts.size() >= 100) {
-      System.out.println("Maximum accounts reached");
-      accounts.remove(id - 1);
-    }
   }
 
   @Override
